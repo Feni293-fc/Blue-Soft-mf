@@ -1,0 +1,12 @@
+<!-- modal-content.component.html -->
+<div class="modal-header">
+    <h4 class="modal-title">Su Saldo Actual es:</h4>
+  </div>
+  <div class="modal-body">
+    {{ account.balance | currency }}
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="openModal()">Consignar</button>
+    <button type="button" class="btn btn-danger" (click)="openModalWithDrawal()">Retirar</button>
+    <button type="button" class="btn btn-secondary" (click)="closeModal()">Cerrar</button>
+  </div>

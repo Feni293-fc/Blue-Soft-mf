@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Tabla de Cuentas</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Numero</th>
+          <th>Tipo de cuenta</th>
+          <th>Ciudad</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let account of accounts">
+          <td>{{ account.accountID }}</td>
+          <td>{{ account.numberAccount }}</td>
+          <td>{{ account.typeAccount }}</td>
+          <td>{{ account.city }}</td>
+          <td class="btn btn-primary" (click)="openModal(account.accountID)">Consultar saldo<i class="fa-brands fa-twitter"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<div>
+    
+</div>

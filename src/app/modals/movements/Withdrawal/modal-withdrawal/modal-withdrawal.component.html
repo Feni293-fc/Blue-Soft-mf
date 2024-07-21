@@ -1,0 +1,25 @@
+<div class="modal-header">
+    <h4 class="modal-title">Consignacion</h4>
+  </div>
+  <div class="modal-body">
+    <div class="container">
+        <form (ngSubmit)="postData()">
+          <div class="form-group">
+            <label for="value">Ciudad:</label>
+            <select class="form-control" [(ngModel)]="movement.city" (change)="seleccionarCiudad(ciudadSeleccionada)">
+                <option value="" disabled selected>Selecciona una ciudad</option>
+                <option *ngFor="let ciudad of ciudades" [value]="ciudad.value">{{ ciudad.nombre }}</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="value">Valor:</label>
+            <input type="value" class="form-control" id="value" name="value" [(ngModel)]="movement.value" required>
+          </div>
+          <br><br>
+          <button type="submit" class="btn btn-primary">Retiro</button>
+        </form>
+      </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="closeModal()">Cancelar</button>
+  </div>
